@@ -1,7 +1,6 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Open+Sans:ital@1&family=Oswald&family=PT+Sans&family=Raleway:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Yantramanav:wght@300;400;500;700&display=swap');
-</style>
-
+<link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Open+Sans:ital@1&family=Oswald&family=PT+Sans&family=Raleway:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Yantramanav:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
 <section>
     <div class="container">
         <h2>Currency Converter</h2>
@@ -10,13 +9,15 @@
                 <select name="unitIn" id="unitIn" [(ngModel)]="unitIn" (change)="getResultAndUpdate($event)">
                     <option *ngFor="let item of currencyArray" [value]="item"> {{item}} </option>
                 </select>
-                <input id="input" name="input" type="number" placeholder="0" min="0" [(ngModel)]="input" (input)="getResultAndUpdate($event)">
+                <input id="input" name="input" type="number" placeholder="0" min="0" [(ngModel)]="input"
+                    (input)="getResultAndUpdate($event)">
             </div>
             <div class="out">
                 <select name="unitOut" id="unitOut" [(ngModel)]="unitOut" (change)="getResultAndUpdate($event)">
                     <option *ngFor="let item of currencyArray" [value]="item"> {{item}} </option>
                 </select>
-                <input id="output" name="output" type="number" placeholder="0" min="0" [(ngModel)]="output" (input)="getResultAndUpdate($event)">
+                <input id="output" name="output" type="number" placeholder="0" min="0" [(ngModel)]="output"
+                    (input)="getResultAndUpdate($event)">
             </div>
         </form>
     </div>
